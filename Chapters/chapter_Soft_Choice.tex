@@ -1,0 +1,77 @@
+%!TEX root = ../template.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% chapter1.tex
+%% NOVA thesis document file
+%%
+%% Chapter with introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\typeout{NT FILE chapter_Soft_Choice.tex}
+
+\chapter{Software Choice}
+\label{cha:software_choice}
+
+\prependtographicspath{{Chapters/Figures/Covers/phd/}{Chapters/Figures/Covers/msc/}}
+
+
+\section{Criteria of choice} 
+\label{sub:criteria_of_choice}
+
+In order to choose the perfect software and library to build the GUI, the following criteria, which will then be summarised, where taken into account:
+
+\begin{itemize}
+  \item License and copyright (OPEN-SOURCE?);
+  \item Cross-platform compatibility;
+  \item Image manipulation properties; %ALTERAR? 
+  \item Compatibility with already used softwares. %DIZER POR OUTRAS PALAVRAS?
+  
+  %FALTA ALGUM ITEM?
+  
+\end{itemize}
+
+\subsection{License and Copyright}
+\label{sub:license_and_copyright}
+
+Software licenses can be divided into 5 main categories:
+
+\begin{itemize}
+
+  \item \textbf{Public Domain}  \\
+  This type of license is the most permissive, granting all rights to the user, thus RELINQUISHING/RENOUNCING(?) any kind of copyright. \\
+  In other words, this type of license allows the user to adopt the code and reuse the software as he pleases.
+ 
+  
+  \item \textbf{Permissive} \\
+  Permissive licenses are the most common among open-source software licenses. It carries only minimal restrictions on how the software can be used, modified, and redistributed, generally requiring only that the original copyright notice be retained.\\
+  \textbf{Examples of Permissive Licenses -} MIT License, BSD licenses, Apache license.
+  
+  \item \textbf{Copyleft} \\
+  A copyleft license is very similar to a permissive license with the main difference being that it doesn't give the user the right to sublicense. \\
+  For example, if the original project was open-source and was under a copyleft license, any modified versions of it should also be open-source and be under the same copyleft license. In contrast, if the original project was under a permissive license, the user may sublicense it under the type of license he desires.\\
+  \textbf{Examples of Copyleft Licenses -} General Public License (GNU/GPL), Linux kernel, OBS.
+  
+    
+  \item \textbf{Lesser General Public License [LGPL]} \\
+  The LGPL is not really a category of licenses, but a license itself, and is (SOMEWHAT/KINDA/-?) the middle term between permissive and copyleft licenses.(ALTERAR/RESCREVER?) \\
+  If a developer uses a LGPL-licensed library to aid his code, he is allowed to license his project under any kind of license of his desire, just like a permissive license. However, if the developer modifies the library or copy parts of it into is code, he will be obligated to put his project under the same LGPL license, similar to copyleft licenses.
+  
+  
+  \item \textbf{Proprietary}\\
+  Proprietary license or proprietary software is the most restrictive kind of license. It gives MOST (?????) of the rights to the developer, making the software ineligible for copying, modifying, or distribution.
+
+  
+\end{itemize}
+
+
+
+
+
+
+
+
+For the development of this project, in order to avoid any POSSIBLE FUTURE TROUBLE (?), it was decided that the developed software should be open-source and, therefore, have no  copyright restrictions. As such, the type of license of the chosen software used in the building of the GUI should either be a public domain, permissive, copyleft, or LGPL license.
+
+% https://www.synopsys.com/blogs/software-security/5-types-of-software-licenses-you-need-to-understand/
+% https://snyk.io/learn/what-is-a-software-license/
+% https://en.wikipedia.org/wiki/Software_license
+% https://en.wikipedia.org/wiki/Permissive_software_license	
