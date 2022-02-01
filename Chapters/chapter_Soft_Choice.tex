@@ -1,4 +1,4 @@
-%!TEX root = ../template.tex
+	%!TEX root = ../template.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% chapter1.tex
 %% NOVA thesis document file
@@ -6,7 +6,11 @@
 %% Chapter with introduction
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
 \typeout{NT FILE chapter_Soft_Choice.tex}
+
+
 
 \chapter{Software Choice}
 \label{cha:software_choice}
@@ -17,7 +21,8 @@
 \section{Criteria of choice} 
 \label{sub:criteria_of_choice}
 
-In order to choose the perfect software and library to build the GUI, the following criteria, which will then be summarised, where taken into account:
+
+In order to choose the perfect software and library to build the GUI, the following criteria, which will then be summarised, were taken into account:
 
 \begin{itemize}
   \item License and copyright (OPEN-SOURCE?);
@@ -32,7 +37,7 @@ In order to choose the perfect software and library to build the GUI, the follow
 \subsection{License and Copyright}
 \label{sub:license_and_copyright}
 
-Software licenses can be divided into 5 main categories:
+When the program is finished, in order to be able to use the software as we please/with free will, it is needed that the codes and libraries, used in aid(??) of building the GUI, are all open-source and of free use to its users. For that purpose, there are licenses that may restring certain rights to the developer or give full copyright (of it)(?) to the owner. Having that in mind, the software licenses that will actually be of use to the project can be divided into the following categories:
 
 \begin{itemize}
 
@@ -53,20 +58,13 @@ Software licenses can be divided into 5 main categories:
     
   \item \textbf{Lesser General Public License [LGPL]} \\
   The LGPL is not really a category of licenses, but a license itself, and is (SOMEWHAT/KINDA/-?) the middle term between permissive and copyleft licenses.(ALTERAR/RESCREVER?) \\
-  If a developer uses a LGPL-licensed library to aid his code, he is allowed to license his project under any kind of license of his desire, just like a permissive license. However, if the developer modifies the library or copy parts of it into is code, he will be obligated to put his project under the same LGPL license, similar to copyleft licenses.
+  If a developer uses a LGPL-licensed library to aid his code, he is allowed to license his project under any kind of license of his desire, just like a permissive license. However, if the developer modifies such library or copy parts of it into is code, he will be obligated to put his project under the same LGPL license, similar to copyleft licenses.
   
   
   \item \textbf{Proprietary}\\
   Proprietary license or proprietary software is the most restrictive kind of license. It gives MOST (?????) of the rights to the developer, making the software ineligible for copying, modifying, or distribution.
 
-  
 \end{itemize}
-
-
-
-
-
-
 
 
 For the development of this project, in order to avoid any POSSIBLE FUTURE TROUBLE (?), it was decided that the developed software should be open-source and, therefore, have no  copyright restrictions. As such, the type of license of the chosen software used in the building of the GUI should either be a public domain, permissive, copyleft, or LGPL license.
@@ -75,3 +73,92 @@ For the development of this project, in order to avoid any POSSIBLE FUTURE TROUB
 % https://snyk.io/learn/what-is-a-software-license/
 % https://en.wikipedia.org/wiki/Software_license
 % https://en.wikipedia.org/wiki/Permissive_software_license	
+
+\subsection{Image Manipulation Properties}
+\label{sub:image_manipulation_properties}
+
+Since the main purpose of the SOFTWARE/APPLICATION is to apply techniques of digital correlation for the monitoring and characterization of materials and structures, it is crucial, for its development, that the chosen library offers a good range of functionalities in terms of image manipulation.\\
+
+The software needs to be capable of calling images under the format .tif, which stands for \textbf{T}agged \textbf{I}mage \textbf{F}ile, since it is the format in which the cameras will upload/SEND? the pictures into the application. \\
+
+%CONFIRMAR COM O PROFESSOR COMO É QUE AS IMAGENS VÃO  PARA A APP
+
+One of the difficulties that Tkinter, the standard Python library for GUI construction(APAGAR "FOR GUI CONSTRUCTION"? TKINTER É SÓ PARA GUI OU TEM OUTRAS FUNÇÕES?), presented in terms of building the PREVIOUS(?) GUI was the fact that when calling an IMAGE/OBJECT(?), it would call it into another WINDOW/POP-UP instead of EMBEDDING (IS THIS A WORD? IS IT CORRECTLY USED?) it on the main window of the application. \\
+
+\subsection{Compatibility with already used Softwares}
+\label{sub:compatibility_with_already_used_softwares}
+
+In order to take advantage of the code that had(?) already been written for the first/(TEST?) GUI, the chosen library had to be compatible with the MatPlotLib software and with OpenCV.
+
+\section{Choosing the software} %SOFTWARE É O TERMO CORRETO?
+\label{sub:choosing_the_software}
+
+The majority of cross-platform Python frameworks are based in:
+
+\begin{itemize}
+  
+  \item \textbf{GTK}
+  \item \textbf{Qt}
+  \item \textbf{Tk}
+  \item \textbf{wxWidgets}
+  
+\end{itemize}
+
+
+Not being a MASTER in the subject of GUI building, in order to choose the appropriate SOFTWARE/MODULE, it was taken into account the opinions and questions of many developers that were shared in websites like Stackoverflow and Quora, websites whose purpose is for community question and answers /(????). Since coding is not really the main focus of a masters in mechanical engineering, it was REASSURING THAT the MODULE used in the development of the GUI had a good  BASE COMMUNITY that might have had the same problems that might occur to me (REDO IN ANOTHER WORDS) at some point. 
+
+A good example of one of the SOFTWARE/MODULE that really got my attention but "DINDNT MAKE THE FINAL CUT", because of its community, was \textbf{Dear PyGui}, based on Dear ImGui a well known GUI LIBRARY/MODULE for C++. Although looking really promising in terms of graphical components AND SUCH(?), it is very recent in comparison with the other SOFTWARES/MODULES, with its first version (0.1.3) being released in April 2020, and, because of that, it lacks a good BASE COMMUNITY to rely on in case of needing help, which can be problematic for a beginner such as me (MUDAR). \\
+
+Other modules that were considered but didn't make the final cut, either for technicalities or sheer preference, were:
+
+\begin{itemize}
+  \item \textbf{Kivy} - Kivy offers modern graphics and design techniques. It is most known for its versatility in cross-platform compatibility, being able to run in Android, iOS, Linux, macOS, and Windows. Since the developed software is not meant to work on Android or iOS, at least not in THIS/A early stage, it was excluded from the list. (ESTÁ BOM ASSIM?)\\
+  
+  \item \textbf{wxPython} - Acting as wrapper for the wxWidgets framework, it allows the developer to create native user interfaces (NUI, interfaces similar to the OS they are used in. Although it could be easier to go for a native UI, it was MY PERSONAL CHOICE/PREFERENCE to be able to have full control of the aspect that the GUI would have regardless of its operating system.\\
+  
+    \item \textbf{Tkinter} - Tkinter, as it was mentioned before, is Python's standard GUI and was the one used to build the software prototype. Since in the building of the prototype there were some undesired setbacks, and in order to GIVE A FRESHER LOOK to the GUI, I've decided to also exclude it. \\
+  
+  \item \textbf{PySimpleGUI} - Just like the name implies, PySimpleGUI is a module designed to ease up a little bit the process of creation of a GUI. It is based on some of the already mentioned frameworks, namely wxPython, Qt, and Tkinter, and is ideal for NEWBIES/STARTERS. Fearing that, in order to make it easier for the developer, might mean that some functionalities of the based framework were cut out, it was automatically a hard no for this one. (ALTERAR/OUTRAS PALAVRAS)\\
+  
+  \item \textbf{Wax} - Similar to PySimpleGUI, Wax is a wrapper for wxPython and was excluded from the list for the same mentioned reason.\\  
+  
+\end{itemize}
+
+
+Given the big list of MODULES available, the final deliberation ended up being between \textbf{PyQt} and \textbf{PySide}. Both these MODULES have  Qt as base framework and are (said to be) very similar in terms of coding, being the major deliberating (???) factor for many developers the difference in their licenses, being that PyQt has a GPL or commercial license and PySide has a LGPL license. \\
+	One of the major factors in favour of both MODULES was their compatibility with QtDesigner. QtDesigner is a tool that allows the creation of the GUI with a drag-and-drop system, which allows the developer to customise its GUI in a what-you-see-is-what-you-get (WYSIWYG) manner, without the need of always resorting to the MAIN code.\\
+Being both very similar, in the end what drew more attention to me was the fact that, at the current date, PySide is the official Qt for Python, which should ensure its viability in a long term.
+
+
+
+
+
+
+% https://www.pythonguis.com/faq/pyqt6-vs-pyside6/
+% https://doc.qt.io/archives/qt-5.6/designer-license-information.html
+% https://doc.qt.io/qt-5/qtdesigner-manual.html
+
+
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+
+%\begin{table}[]
+%\begin{tabular}{cccccc}
+%\multirow{2}{*}{} & \multirow{2}{*}{Based Framework} & \multirow{2}{*}{License}                                                        & \multirow{2}{*}{Crossplatform} & \multicolumn{2}{c}{Compatibility} \\
+%                  &                                  &                                                                                 &                                & MatPlotLib        & OpenCV        \\
+%PyQt5/PyQt6       & Qt                               & GPL or Comercial                                                                & ✓                              & ✓                 & ✓             \\
+%Tkinter           & Tk                               & \begin{tabular}[c]{@{}c@{}}Python License \\ (Permissive)\end{tabular}          &                                &                   &               \\
+%Kivy              &                                  & \begin{tabular}[c]{@{}c@{}}MIT License\\ (Permissive)\end{tabular}              & ✓                              &                   &               \\
+%wxPython          & wxWidgets                        & \begin{tabular}[c]{@{}c@{}}wxWindows Library Licence\\ (LGPL)\end{tabular}      & ✓                              &                   &               \\
+%PySimpleGUI       & Tkinter, Qt, wxPython            & LGPL 3                                                                          & ✓                              &                   &               \\
+%PyForms           & Qt \& OpenGL                     & \begin{tabular}[c]{@{}c@{}}MIT License\\ (Permissive)\end{tabular}              &                                &                   &               \\
+%PySide2           & Qt5/Qt6                          & LGPL 2.1                                                                        & ✓                              &                   &               \\
+%PySide6           & Qt6                              & \begin{tabular}[c]{@{}c@{}}(LGPLv3/GPLv2)\\ and commercial license\end{tabular} & ✓                              &                   &               \\
+%PyGUI             &                                  & \begin{tabular}[c]{@{}c@{}}MIT License\\ (Permissive)\end{tabular}              &                                &                   &               \\
+%DearPyGUI         & Dear ImGui                       & \begin{tabular}[c]{@{}c@{}}MIT License\\ (Permissive)\end{tabular}              &                                &                   &              
+%\end{tabular}
+%\end{table}
+
