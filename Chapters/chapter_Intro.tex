@@ -1,18 +1,32 @@
 %!TEX root = ../template.tex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% chapter2.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% chapter1.tex
 %% NOVA thesis document file
 %%
-%% Chapter with the template manual
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Chapter with introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\typeout{NT FILE chapter2.tex}
+\typeout{NT FILE chapter1.tex}
 
-\chapter{Digital Image Correlation}
-\label{cha:digital_image_correlation}
+\chapter{Introduction}
+\label{cha:introduction}
 
-\section{What is it?}
-\label{sub:dic_definition}
+\prependtographicspath{{Chapters/Figures/Covers/phd/}{Chapters/Figures/Covers/msc/}}
+
+% epigraph configuration
+\epigraphfontsize{\small\itshape}
+\setlength\epigraphwidth{12.5cm}
+\setlength\epigraphrule{0pt}
+
+\epigraph{
+  This work is licensed under the \href{LaTeX project public license}{\LaTeX\ Project Public License v1.3c}.
+  To view a copy of this license, visit \url{LaTeX project public license}.
+}
+
+This is the \novathesis\ \LaTeX\ template version v\novathesisversion\ from \novathesisdate.
+
+\section{Digital Image Correlation} 
+\label{sub:dic}
 
 % Compared to strain gages and extensometers, the amount of information gathered about the fine details of deformation during mechanical tests is increased due to the ability to provide both local and average data using digital image correlation.
 
@@ -26,7 +40,7 @@ This technique has first been applied to digital images in 1975 and, thanks to t
 
 In order to perform the technique, the sample surface is painted with a solid base colour, typically black or white, and then SPRINKLED/SPRAYED WITH A CONTRASTING COLOUR, creating distinct patterns all over it. Those patterns are then taken as a reference in the control picture and compared, in terms of displacement and DEFORMATION, with the ones on the following deformed pictures, from which the strains can also be calculated through.\\
 
-This method of analysis is possible by transforming the pictures into matrices, where each of its units represent subsets or blocks of pixels, correlating the position of such pixels in the original and deformed pictures, as shown in the figure~\ref{fig:dic}, thence the need of creating distinct patterns.\\
+This method of analysis is possible by turning the pictures into matrices, where each of its units represent subsets or blocks of pixels, correlating the position of such pixels in the original and deformed PICTURES/MATRICES, as shown in the figure~\ref{fig:dic}, thence the need of creating distinct patterns.\\
 
 \begin{figure}[h!]
 	\centering
@@ -35,10 +49,10 @@ This method of analysis is possible by transforming the pictures into matrices, 
 	\label{fig:dic}
 \end{figure}
 
-The developed software is a 3D DIC software, whose code was written in python, meant to be open-source, and was BASED in the Manta GigE Allied Vision digital cameras OUTPUTS.
-Having the MAIN CODE finished, the next step consisted on making it accessible and intuitive for its users to work with.
+The developed software is a 3D DIC software, whose code was written in python and which is meant to be open-source. The software was BASED and tested with the aid of FOUR(?) Manta GigE Allied Vision digital cameras. %EACH POSITIONED IN XXXX ANGLES AND CAPABLE OF MICRO ANALYSIS???'
+Having the MAIN CODE finished, the next step consisted on making it accessible and of intuitive use for its users.
 
-Throughout the course of this paper, it will be DISCUSSED/SHOWN/EXPLAINED the process and deliberations taken in order to build the GUI. The POINT/OBJECTIVE is to have a light, yet SATISFYING,
+Throughout the course of this paper, it will be explained the process and deliberations taken in order to build the GUI. The objective was to have a light-looking, yet COMPLETE/FULFILLING, GUI where the user would be capable of using it in an intuitive way.
 
 %It is also possible to estimate shifts to a finer resolution than the resolution of the original images, which is often called "subpixel" registration because the measured shift is smaller than an integer pixel unit. 
 
@@ -52,3 +66,4 @@ Throughout the course of this paper, it will be DISCUSSED/SHOWN/EXPLAINED the pr
 % M.A. Rastak, Mahmood M. Shokrieh, L.Barrallier, R. Kubler, S.D. Salehi, in Residual Stresses in Composite Materials (Second Edition), 2021
 % W. Broughton, in Adhesives in Marine Engineering, 2012
 % https://en.wikipedia.org/wiki/Digital_image_correlation_and_tracking
+

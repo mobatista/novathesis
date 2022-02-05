@@ -41,15 +41,15 @@
 % Degree customization
 %   If the degree includes a specialization
 %   syntax: \ntspecialization(language){name}
-\ntspecialization(pt){\embrace{Designação da Especialidade}}
-\ntspecialization(en){\embrace{Speciality Name}}
+%\ntspecialization(pt){\embrace{Designação da Especialidade}}
+%\ntspecialization(en){\embrace{Speciality Name}}
 
 %%------------------------------------------------------------
 % Sponsors
 %   Some Schools require the work sponsors to be listed in the cover
 %   syntax: \ntsponsors(language){names}
-\ntsponsors(pt){\embrace{Fontes de Financiamento}}
-\ntsponsors(en){\embrace{Funding Sponsors}}
+%\ntsponsors(pt){\embrace{Fontes de Financiamento}}
+%\ntsponsors(en){\embrace{Funding Sponsors}}
 
 %%------------------------------------------------------------
 % Author full name, abbreviated name, and gender
@@ -66,8 +66,8 @@
 % Submission date
 %   syntax: \ntdatemonth{month}
 %           \ntdateyear{year}
-\ntdatemonth{\embrace{month}}
-\ntdateyear{\embrace{year}}
+\ntdatemonth{\embrace{February}}
+\ntdateyear{\embrace{2022}}
 
 %%------------------------------------------------------------
 % Advisers' gender and info (name, position, school, etc)
@@ -78,12 +78,11 @@
 %                     [m] for male
 %   Use "\\" to force line breaks
 % Advisers(s)
-\ntaddperson{adviser}[a,f]{Mary Doe Adviser Name, Full Professor, NOVA University Lisbon}
-% \ntaddperson{adviser}[a,f]{Mary Doe other Adviser Name, Full Professor, NOVA University Lisbon}
-% \ntaddperson{adviser}[a,f]{{Mary Doe yet another Adviser Name, Full Professor, NOVA University Lisbon}}
+\ntaddperson{adviser}[a,m]{José Manuel Cardoso Xavier, Full Professor, NOVA University Lisbon}
+
 % Co-advisers(s)
-\ntaddperson{adviser}[c,f]{John Doe Co-Adviser Name, Associate Professor, NOVA University Lisbon}
-\ntaddperson{adviser}[c,f]{John Doe other Co-Adviser Name, Full Professor, NOVA University Lisbon}
+\ntaddperson{adviser}[c,m]{João Carlos Andrade De Deus Filho, Associate Professor, NOVA University Lisbon}
+
 
 %%------------------------------------------------------------
 % Committee members
@@ -96,10 +95,10 @@
 %   For [gender] use: [f] for female
 %                     [m] for male
 %   Use "\\" to force line breaks
-\ntaddperson{committee}[c,m]{Name of the committee chairperson, Full Professor, FCT-NOVA}
-\ntaddperson{committee}[r,m]{Name of a rapporteur, Associate Professor, Another University}
+%\ntaddperson{committee}[c,m]{Name of the committee chairperson, Full Professor, FCT-NOVA}
+%\ntaddperson{committee}[r,m]{Name of a rapporteur, Associate Professor, Another University}
 % \ntaddperson{committee}[r,m]{Name of another rapporteur, \\Assistant Professor, Another University}
 % \ntaddperson{committee}[a,m]{Name of the adviser present in defense, Associate Professor, Some University}
-\ntaddperson{committee}[m,f]{Another member of the committee, Full Professor, Another University}
-\ntaddperson{committee}[m,f]{Yet another member of the committee, Assistant Professor, Another University}
+%\ntaddperson{committee}[m,f]{Another member of the committee, Full Professor, Another University}
+%\ntaddperson{committee}[m,f]{Yet another member of the committee, Assistant Professor, Another University}
 % \ntaddperson{committee}[g,m]{Guest member of the committee, Position, University}
