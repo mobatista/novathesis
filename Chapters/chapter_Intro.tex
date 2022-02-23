@@ -11,19 +11,6 @@
 \chapter{Introduction}
 \label{cha:introduction}
 
-\prependtographicspath{{Chapters/Figures/Covers/phd/}{Chapters/Figures/Covers/msc/}}
-
-% epigraph configuration
-\epigraphfontsize{\small\itshape}
-\setlength\epigraphwidth{12.5cm}
-\setlength\epigraphrule{0pt}
-
-\epigraph{
-  This work is licensed under the \href{LaTeX project public license}{\LaTeX\ Project Public License v1.3c}.
-  To view a copy of this license, visit \url{LaTeX project public license}.
-}
-
-This is the \novathesis\ \LaTeX\ template version v\novathesisversion\ from \novathesisdate.
 
 \section{Digital Image Correlation} 
 \label{sub:dic}
@@ -35,12 +22,13 @@ This is the \novathesis\ \LaTeX\ template version v\novathesisversion\ from \nov
 
 
 
-Digital image correlation, DIC, is an optical full-field strain measurement technique for 2D or 3D ANALYSIS. IN A SIMPLER MANNER OF SPEECH, DIC consists in the comparison of two images of an object before and after its deformation.\\
-This technique has first been applied to digital images in 1975 and, thanks to the progress of technology and improvement of cameras, it has become a reliable technique for many present-day applications, like image analysis, velocimetry, and strain estimation.\\
+\indent \indent Digital image correlation, DIC, is an optical full-field strain measurement technique for 2D or 3D analysis. In a simpler manner of speech, DIC consists in the comparison of two or more images of an object before and after its deformation.
 
-In order to perform the technique, the sample surface is painted with a solid base colour, typically black or white, and then SPRINKLED/SPRAYED WITH A CONTRASTING COLOUR, creating distinct patterns all over it. Those patterns are then taken as a reference in the control picture and compared, in terms of displacement and DEFORMATION, with the ones on the following deformed pictures, from which the strains can also be calculated through.\\
+This technique has first been applied to digital images in 1975 and, thanks to the progress of technology and improvement of cameras, it has become a reliable technique for many present-day applications like, image analysis, velocimetry, and strain estimation.
 
-This method of analysis is possible by turning the pictures into matrices, where each of its units represent subsets or blocks of pixels, correlating the position of such pixels in the original and deformed PICTURES/MATRICES, as shown in the figure~\ref{fig:dic}, thence the need of creating distinct patterns.\\
+In order to perform the technique, the sample surface is painted with a solid base colour, typically black or white, and then sprayed with a contrasting colour, creating distinct patterns all over it. Those patterns are then taken as a reference in the control picture and compared, in terms of displacement and deformation, with the ones on the following deformed pictures, from which the strains can also be calculated through.
+
+This method of analysis is possible by turning the pictures into matrices, where each of its units represent subsets or blocks of pixels, correlating the position of such pixels in the original and deformed images, as shown in the figure~\ref{fig:dic}, thence the need of creating distinct patterns.
 
 \begin{figure}[h!]
 	\centering
@@ -49,10 +37,10 @@ This method of analysis is possible by turning the pictures into matrices, where
 	\label{fig:dic}
 \end{figure}
 
-The developed software is a 3D DIC software, whose code was written in python and which is meant to be open-source. The software was BASED and tested with the aid of FOUR(?) Manta GigE Allied Vision digital cameras. %EACH POSITIONED IN XXXX ANGLES AND CAPABLE OF MICRO ANALYSIS???'
-Having the MAIN CODE finished, the next step consisted on making it accessible and of intuitive use for its users.
+The developed software, on which this paper is focused on, is a 3D DIC software, whose code was written in python, and which is meant to be open-source. The software was based and tested with the aid of Manta GigE Allied Vision digital cameras. %EACH POSITIONED IN XXXX ANGLES AND CAPABLE OF MICRO ANALYSIS???' REFAZER FRASE
+Having the codebase finished, the next step consisted on making it accessible for its users through a \textbf{G}raphical \textbf{U}ser \textbf{I}nterface, GUI.
 
-Throughout the course of this paper, it will be explained the process and deliberations taken in order to build the GUI. The objective was to have a light-looking, yet COMPLETE/FULFILLING, GUI where the user would be capable of using it in an intuitive way.
+Throughout the course of this paper, it will be explained the process and deliberations taken in order to build the GUI. The objective was to have a light-looking GUI, where the user would be capable of using it in an objective and intuitive way.
 
 %It is also possible to estimate shifts to a finer resolution than the resolution of the original images, which is often called "subpixel" registration because the measured shift is smaller than an integer pixel unit. 
 

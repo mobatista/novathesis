@@ -8,29 +8,43 @@
 
 \typeout{NT FILE abstrac-en.tex}
 
-Regardless of the language in which the dissertation is written, a summary is required in the same language as the main text and another summary in another language. It is assumed that the two languages in question are Portuguese and English.
+% Compared to strain gages and extensometers, the amount of information gathered about the fine details of deformation during mechanical tests is increased due to the ability to provide both local and average data using digital image correlation.
 
-The abstracts should appear first in the language of the main text and then in the other language. For example, if the dissertation is written in Portuguese the abstract in Portuguese will appear first, then the abstract in English, followed by the main text in Portuguese. If the dissertation is written in English, the abstract in English will appear first, then the abstract in Portuguese, followed by the main text in English. 
 
-In the \LaTeX\ version, the NOVAthesis template will automatically order the two abstracts taking into account the language of the main text. You may change this behaviour by adding
-\begin{verbatim}
-    \abstractorder(<MAIN_LANG>):={<LANG_1>,...,<LANG_N>}
-\end{verbatim}
-\noindent to the customization area in the document preamble, e.g.,
-\begin{verbatim}
-    \abstractorder(de):={de,en,it}
-\end{verbatim}
+%The tracking creates in-plane displacement patterns, from which strains are calculated. Multiple cameras triangulating on the points can map out-of-plane displacements as well. During the test, the movement of the spots are recorded digitally, and appropriate derivatives of displacement are taken to arrive at strains.
 
-The abstracts should not exceed one page and, in a generic way, should answer the following questions (it is essential to adapt to the usual practices of your scientific area):
 
-\begin{enumerate}
-  \item What is the problem?
-  \item Why is this problem interesting/challenging?
-  \item What is the proposed approach/solution?
-  \item What results (implications/consequences) from the solution?
-\end{enumerate}
 
-% Palavras-chave do resumo em Inglês
-\begin{keywords}
-Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5, Keyword 6, Keyword 7, Keyword 8, Keyword 9, …
-\end{keywords} 
+Digital image correlation, DIC, is an optical full-field strain measurement technique for 2D or 3D ANALYSIS. In a simpler manner of speech, DIC consists in the comparison of two or more images of an object before and after its deformation.\\
+This technique has first been applied to digital images in 1975 and, thanks to the progress of technology and improvement of cameras, it has become a reliable technique for many present-day applications like, image analysis, velocimetry, and strain estimation.\\
+
+In order to perform the technique, the sample surface is painted with a solid base colour, typically black or white, and then sprayed with a contrasting colour, creating distinct patterns all over it. Those patterns are then taken as a reference in the control picture and compared, in terms of displacement and deformation, with the ones on the following deformed pictures, from which the strains can also be calculated through.\\
+
+This method of analysis is possible by turning the pictures into matrices, where each of its units represent subsets or blocks of pixels, correlating the position of such pixels in the original and deformed PICTURES/MATRICES, as shown in the figure~\ref{fig:dic}, thence the need of creating distinct patterns.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1]{DIC}
+	\caption{Example of image correlation}
+	\label{fig:dic}
+\end{figure}
+
+The developed software, on which this paper is focused on, is a 3D DIC software, whose code was written in python, and which is meant to be open-source. The software was BASED and tested with the aid of Manta GigE Allied Vision digital cameras. %EACH POSITIONED IN XXXX ANGLES AND CAPABLE OF MICRO ANALYSIS???' REFAZER FRASE
+Having the codebase finished, the next step consisted on making it accessible for its users through a \textbf{G}raphical \textbf{U}ser \textbf{I}nterface, GUI.
+
+Throughout the course of this paper, it will be SHOWED/EXPLAINED the progress/PROCESS and deliberations taken in order to build the GUI. The objective was to have a LIGHT-LOOKING GUI, where the user would be capable of using it in an objective and intuitive way.
+
+%It is also possible to estimate shifts to a finer resolution than the resolution of the original images, which is often called "subpixel" registration because the measured shift is smaller than an integer pixel unit. 
+
+
+
+
+
+
+% https://www.sciencedirect.com/topics/engineering/digital-image-correlation
+% Donald F. Adams, Thomas J. Whitney, in Comprehensive Composite Materials II, 2018
+% M.A. Rastak, Mahmood M. Shokrieh, L.Barrallier, R. Kubler, S.D. Salehi, in Residual Stresses in Composite Materials (Second Edition), 2021
+% W. Broughton, in Adhesives in Marine Engineering, 2012
+% https://en.wikipedia.org/wiki/Digital_image_correlation_and_tracking
+
+

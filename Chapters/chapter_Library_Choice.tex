@@ -22,7 +22,7 @@
 \label{sub:criteria_of_choice}
 
 
-In order to choose the perfect software and library to build the GUI, the following criteria, which will then be summarised, were taken into account:
+\indent \indent In order to choose the perfect library to build the GUI, the following criteria, which will then be summarised, were taken into account:
 
 \begin{itemize}
   \item License and copyright issues;
@@ -36,32 +36,37 @@ In order to choose the perfect software and library to build the GUI, the follow
 \subsection{License and Copyright issues}
 \label{sub:license_and_copyright}
 
-When the program is finished, in order to be able to use the software as it is pleased, it is necessary that the codes and libraries, used in aid of building the GUI, are all open-source and of free use to its users. For that purpose, there are licenses that may restring certain rights to the developer or give full copyright (of it)(?) to the owner. Having that in mind, the software licenses that will actually be of use to the project can be divided into the following categories:
+\indent \indent When the program is finished, in order to be able to use the software as it is pleased, it is necessary that the codes and libraries, used in aid of building the GUI, are all open-source and of free use to its users. For that purpose, there are licenses that may restring certain rights to the developer or give full copyright of it to the owner. Having that in mind, the software licenses that will actually be of use to the project can be divided into the following categories:
 
 \begin{itemize}
 
   \item \textbf{Public Domain}  \\
-  This type of license is the most permissive, granting all rights to the user, thus RELINQUISHING/RENOUNCING(?) any kind of copyright. \\
-  In other words, this type of license allows the user to adopt the code and reuse the software as he pleases.
+  This type of license is the most permissive, granting all rights to the user, thus relinquishing any kind of copyright. 
+
+  In other words, this type of license allows the user to adopt the code and reuse the developed software as he pleases.
  
   
   \item \textbf{Permissive} \\
-  Permissive licenses are the most common among open-source software licenses. It carries only minimal restrictions on how the software can be used, modified, and redistributed, generally requiring only that the original copyright notice be retained.\\
+  Permissive licenses are the most common among open-source software licenses. It carries only minimal restrictions on how the software can be used, modified, and redistributed, generally requiring only that the original copyright notice be retained.
+
   \textbf{Examples of Permissive Licenses -} MIT License, BSD licenses, Apache license.
   
   \item \textbf{Copyleft} \\
-  A copyleft license is very similar to a permissive license with the main difference being that it doesn't give the user the right to sublicense. \\
-  For example, if the original project was open-source and was under a copyleft license, any modified versions of it should also be open-source and be under the same copyleft license. In contrast, if the original project was under a permissive license, the user may sublicense it under the type of license he desires.\\
+  A copyleft license is very similar to a permissive license with the main difference being that it doesn't give the user the right to sublicense. 
+
+  For example, if the original project was open-source and was under a copyleft license, any modified versions of it should also be open-source and be under the same copyleft license. In contrast, if the original project was under a permissive license, the user may sublicense it under the type of license he desires.
+
   \textbf{Examples of Copyleft Licenses -} General Public License (GNU/GPL), Linux kernel, OBS.
   
     
   \item \textbf{Lesser General Public License [LGPL]} \\
-  The LGPL is not really a category of licenses, but a license itself, and is (SOMEWHAT/KINDA/-?) the middle term between permissive and copyleft licenses.(ALTERAR/RESCREVER?) \\
-  If a developer uses a LGPL-licensed library to aid his code, he is allowed to license his project under any kind of license of his desire, just like a permissive license. However, if the developer modifies such library or copy parts of it into is code, he will be obligated to put his project under the same LGPL license, similar to copyleft licenses.
+  The LGPL is not really a category of licenses, but a license itself, and is somewhat the middle term between permissive and copyleft licenses.
+
+  If a developer uses a LGPL-licensed library to aid his code, he is allowed to license his project under any kind of license of his desire, just like a permissive license. However, if the developer modifies such library or copies parts of it into is code, he will be obligated to put his project under the same LGPL license, similar to copyleft licenses.
   
   
   \item \textbf{Proprietary}\\
-  Proprietary license or proprietary software is the most restrictive kind of license. It gives MOST (?????) of the rights to the developer, making the software ineligible for copying, modifying, or distribution.
+  Proprietary license or proprietary software is the most restrictive kind of license. It gives most of the rights to the developer, if not all, making the software ineligible for copying, modifying, or distribution.
 
 \end{itemize}
 
@@ -76,54 +81,58 @@ For the development of this project, it was intended that the developed software
 \subsection{Cross-platform Compatibility}
 \label{sub:platform_compatibility}
 
-Being the software a tool intended for research and professional means, the possibility of a user not being able to use it, because it is not compatible with his current operating system, is undesired. AS SUCH, the chosen library should be able to CREATE a cross-platform GUI, compatible with the BIGGEST computer operating systems, namely Windows, Linux, and MacOS.
+\indent \indent Being the software a tool intended for research and professional means, the possibility of a user not being able to use it, because it is not compatible with his current operating system, is undesired. As such, the chosen library should allow the creation of a cross-platform GUI, compatible with the most known computer operating systems, namely Windows, Linux, and MacOS.
 
 
 \subsection{Libraries Compatibility}
 \label{sub:libraries_compatibility}
 
-Since the main purpose of the software is to apply techniques of digital correlation for the monitoring and characterization of materials and structures, it is crucial, for its development, that the chosen module offers a good range of functionalities in terms of image manipulation.\\
+\indent \indent Since the main purpose of the software is to apply techniques of digital correlation for the monitoring and characterization of materials and structures, it is crucial, for its development, that the chosen module offers a good range of functionalities in terms of image manipulation.
 
-As such, the module needs to be capable of READING images under the format .tif, which stands for \textbf{T}agged \textbf{I}mage \textbf{F}ile, and be compatible with the following libraries:
+As such, the module needs to be capable of reading images under the format .tif, which stands for \textbf{T}agged \textbf{I}mage \textbf{F}ile, and be compatible with the following libraries:
 \begin{itemize}
   \item \textbf{OpenCV -} Responsible for calling the .tif files;
   \item \textbf{MatPlotLib -} Responsible for turning the images into matrix;
-  \item \textbf{NumPy} - Responsible for the ANALYSIS? ;
+  \item \textbf{NumPy} - Responsible for the analysis; %CONFIRMAR
 \end{itemize}
 which are responsible for the graphical analysis of the uploaded files.
 
 %since it is the format in which the cameras will upload/SEND? the pictures into the application. \\
 %CONFIRMAR COM O PROFESSOR COMO É QUE AS IMAGENS VÃO  PARA A APP
 
-One of the difficulties that Tkinter, the standard Python module for GUI construction, presented when building the first prototype, was shown while executing the analysis, where it would open a new pop-up window for each of the uploaded image files ,overloading the users screen with pop-ups, instead of only showing the intended result embedded on the main window of the GUI.\\
+One of the difficulties that Tkinter, the standard Python module for GUI construction, presented when building the first prototype, was shown while executing the analysis, where it would open a new pop-up window for each of the uploaded image files, overloading the users screen with pop-ups, instead of only showing the intended result embedded on the main window of the GUI.
 % In other to fix that, it was necessary to ) 
 
 
 \section{Choosing the library} %SOFTWARE É O TERMO CORRETO?
 \label{sub:choosing_the_library}
 
-In order to choose the appropriate library, it was taken into account the opinions and questions of many developers that were shared in websites like Stackoverflow and Quora, websites whose main purpose is to SHARE question and answers from the community. Since coding is not really the main focus of a masters in mechanical engineering, it was REASSURING THAT the library used in the development of the GUI would have a good BASE COMMUNITY that might have already had the same problems that could occur in the process.
+\indent \indent In order to choose the appropriate library, it was taken into account the opinions and questions of many developers that were shared in websites like Stackoverflow and Quora, websites whose main purpose is to share community question and answers. Since coding is not really the main focus of a masters in mechanical engineering, it was reassuring that the library used in the development of the GUI would have a good base community that might have already had the same problems that could occur in the process.
 
-A good example of one of the libraries that really seemed promising but "DINDNT MAKE THE FINAL CUT", because of its community, was \textbf{Dear PyGui}, based on Dear ImGui a well known GUI library for C++. Although looking really appellative in terms of graphical components AND SUCH(?), it is very recent in comparison with many other good libraries, with its first version (0.1.3) being released in April 2020, and, because of that, it lacks a good BASE COMMUNITY to rely on in case of needing help, which could turn out to be problematic.\\
+A good example of one of the libraries that really seemed promising but "didn't make the final cut", because of its community, was \textbf{Dear PyGui}, based on Dear ImGui a well known GUI library for C++. Although looking really promising and appellative in terms of graphical components, it is very recent in comparison with many other good libraries, with its first version (0.1.3) being released in April 2020, and, because of that, it lacks a good base community to rely on, in case of needing help, which could turn out to be problematic.
 
-Some of the other libraries that were (TAKEN INTO CONSIDERATION) considered but didn't make the final cut, either for technicalities or sheer preference, were:
+Some of the other libraries that were taken into consideration were:
 
 \begin{itemize}
-  \item \textbf{Kivy} - Kivy offers modern graphics and design techniques. It is most known for its versatility in cross-platform compatibility, being able to run in Android, iOS, Linux, macOS, and Windows. Since the developed software is not meant to work on Android or iOS, at least not in THIS/A early stage, it was excluded from the list. (ALTERAR?)\\
+  \item \textbf{Kivy} - Kivy offers modern graphics and design techniques. It is most known for its versatility in cross-platform compatibility, being able to run in Android, iOS, Linux, macOS, and Windows. Since the developed software is not meant to work on Android or iOS, at least not such an early stage, it was excluded from the list.
   
-  \item \textbf{wxPython} - Acting as wrapper for the wxWidgets framework, it allows the developer to create native user interfaces, NUI, interfaces similar to the OS they are used in. \\ %Although it could be easier to go for a native UI, it was MY PERSONAL CHOICE/PREFERENCE to be able to have full control of the aspect that the GUI would have regardless of its operating system.\\
+  \item \textbf{wxPython} - Acting as wrapper for the wxWidgets framework, it allows the developer to create native user interfaces, NUI, interfaces similar to the OS they are used in.  %Although it could be easier to go for a native UI, it was MY PERSONAL CHOICE/PREFERENCE to be able to have full control of the aspect that the GUI would have regardless of its operating system.\\
   
-    \item \textbf{Tkinter} - Tkinter, as it was mentioned before, is Python's standard GUI and was the one used to build the software prototype. Since, in the building of the prototype, there were some undesired INCONVENIENCES, that would turn the code HEAVIER than the necessary, it was excluded from the list in order to find a better solution. \\
+  \newpage
+
+  \item \textbf{Tkinter} - Tkinter, as it was mentioned before, is Python's standard GUI and was the one used to build the software prototype. Since, in the building of the prototype, there were some undesired inconveniences, that would turn the code heavier than the necessary, it was excluded from the list in order to find a better solution. 
   
-  \item \textbf{PySimpleGUI} - Just like the name implies, PySimpleGUI is a module designed to ease up a little bit the process of creation of a GUI. It is based on some of the ALREADY mentioned libraries, namely wxPython, Qt, and Tkinter, and is ideal for NEWBIES/STARTERS. Fearing that, in order to make it easier for the developer, might mean that some functionalities of the based framework were cut out, it was ALMOST automatically a hard no for this one. (ALTERAR/OUTRAS PALAVRAS)\\
+  \item \textbf{PySimpleGUI} - Just like the name implies, PySimpleGUI is a module designed to ease up a little bit the process of creation of a GUI. It is based on some of the already mentioned libraries, like, wxPython, Qt, and Tkinter, and is ideal for starters. Fearing that, in order to make it easier for the developer, might mean that some functionalities of the based framework were cut out, it was almost immediately put aside.
   
-  \item \textbf{Wax} - Similar to PySimpleGUI, Wax is a wrapper for wxPython and was excluded from the list for the same mentioned reason.\\  
+  \item \textbf{Wax} - Similar to PySimpleGUI, Wax is a wrapper for wxPython and was excluded from the list for the same mentioned reason.  
   
 \end{itemize}
 
 
-Given the big list of libraries available, the final deliberation ended up being between \textbf{PyQt6} and \textbf{PySide6}. Both these libraries have Qt as base framework and are (said to be) very similar in terms of coding, being the major deliberating (???) factor for many developers the difference in their licenses, where PyQt6 has a GPL or commercial license and PySide6 has a LGPL license. \\
-	One of the major factors in favour of both MODULES was their compatibility with QtDesigner. QtDesigner is a tool, also from the Qt Company, that allows the creation of the GUI with a drag-and-drop system, which allows the developer to customise its GUI in a what-you-see-is-what-you-get (WYSIWYG) manner, without the need of always resorting to the MAIN code.\\
+Given the big list of libraries available, the final deliberation ended up being between \textbf{PyQt6} and \textbf{PySide6}. Both these libraries have Qt as base framework and are said to be very similar in terms of coding, being the major deliberating factor, for many developers, the difference in their licenses, where PyQt6 has a GPL or commercial license and PySide6 has a LGPL license.
+
+One of the major factors in favour of both libraries was their compatibility with QtDesigner. QtDesigner is a tool, also from the Qt Company, that allows the creation of the GUI with a drag-and-drop system, which allows the developer to customize its GUI in a what-you-see-is-what-you-get (WYSIWYG) manner, without the need of always resorting to the main code.
+
 Being both very similar, in the end the decisive factor was the fact that, at the current date, PySide6 is the official Qt library for Python, which should ensure its viability in a long term.
 
 
